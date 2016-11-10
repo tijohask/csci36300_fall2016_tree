@@ -7,6 +7,10 @@ project (Tree) {
 
 	Source_Files {
 		driver.cpp
+		Visitor.cpp
+		Binary_Node.cpp
+		Add_Node.cpp
+		Num_Node.cpp
 	}
 
 	Template_Files {
@@ -23,6 +27,11 @@ project (Tree) {
 		Fixed_Array.h
 		Queue.h
 		Stack.h
+		Node.h
+		Binary_Node.h
+		Add_Node.h
+		Num_Node.h
+		Visitor.h
 	}
 
 	Inline_Files {
