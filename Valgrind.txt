@@ -1,22 +1,22 @@
-==3503== Memcheck, a memory error detector
-==3503== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==3503== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==3503== Command: ./Tree
-==3503== Parent PID: 3475
-==3503== 
-==3503== 
-==3503== HEAP SUMMARY:
-==3503==     in use at exit: 72,704 bytes in 1 blocks
-==3503==   total heap usage: 3 allocs, 2 frees, 77,824 bytes allocated
-==3503== 
-==3503== LEAK SUMMARY:
-==3503==    definitely lost: 0 bytes in 0 blocks
-==3503==    indirectly lost: 0 bytes in 0 blocks
-==3503==      possibly lost: 0 bytes in 0 blocks
-==3503==    still reachable: 72,704 bytes in 1 blocks
-==3503==         suppressed: 0 bytes in 0 blocks
-==3503== Reachable blocks (those to which a pointer was found) are not shown.
-==3503== To see them, rerun with: --leak-check=full --show-leak-kinds=all
-==3503== 
-==3503== For counts of detected and suppressed errors, rerun with: -v
-==3503== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==4879== Memcheck, a memory error detector
+==4879== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==4879== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==4879== Command: ./Tree
+==4879== Parent PID: 4847
+==4879== 
+==4879== 
+==4879== HEAP SUMMARY:
+==4879==     in use at exit: 72,704 bytes in 1 blocks
+==4879==   total heap usage: 3 allocs, 2 frees, 74,752 bytes allocated
+==4879== 
+==4879== LEAK SUMMARY:
+==4879==    definitely lost: 0 bytes in 0 blocks
+==4879==    indirectly lost: 0 bytes in 0 blocks
+==4879==      possibly lost: 0 bytes in 0 blocks
+==4879==    still reachable: 72,704 bytes in 1 blocks
+==4879==         suppressed: 0 bytes in 0 blocks
+==4879== Reachable blocks (those to which a pointer was found) are not shown.
+==4879== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==4879== 
+==4879== For counts of detected and suppressed errors, rerun with: -v
+==4879== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
