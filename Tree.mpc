@@ -1,5 +1,5 @@
-project (Composition) {
-	exename = Composition
+project (Tree) {
+	exename = Tree
 
 	specific(make){
 		compile_flags += -std=c++11
