@@ -23,12 +23,50 @@ int main()
 	printf( "Welcome to the Infix to Postfix converting program\n" );
 	printf( "Type \"QUIT\" to leave.\n" );
 	run_code();
-	
+
 }
 
 void run_code()
 {
-	
+	std::string input;
+	bool flag = true;
+	while(true)
+	{
+		std::istringstream infix ("");
+		flag = false;
+		printf("Please input an equation:\n");
+		getline(std::cin, input);
+		if( input.compare("QUIT") == 0 )
+		{
+			break;
+		}
+
+		if( input.compare("") != 0 )
+		{// make sure the user doesn't just input nothing.
+			flag = true;
+		}
+
+		if( flag )
+		{//check the equation to make sure it's valid
+			infix.clear();
+			infix.str( input );
+			flag = check_equation( infix );
+		}
+
+		if( flag )
+		{//run the evaluation on the equation
+			printf("The equation is valid\n");
+//			infix.clear();
+//			infix.str( input );
+//			infix_to_command( infix, commands );
+//			evaluate( commands );
+		}
+		else
+		{
+			printf("The equation is not valid\n");
+		}
+	}
+	printf("Goodbye.\n");
 }
 
 /*
@@ -44,7 +82,7 @@ bool check_equation( std::istringstream & check )
 	while( !check.eof() )
 	{
 		check >> token;
-		
+
 		if( is_integer(token) )
 		{
 			if ( num_next )
@@ -53,6 +91,7 @@ bool check_equation( std::istringstream & check )
 			}
 			else
 			{//a problem has emerged
+				printf("Error: Expected Operator.\n");
 				return false;
 			}
 		}
@@ -68,7 +107,7 @@ bool check_equation( std::istringstream & check )
 			}
 			else
 			{//a problem has emerged
-				printf( "Error: \"%s\" Operator without numbers.\n", 
+				printf( "Error: \"%s\" Operator without numbers.\n",
 					token.c_str() );
 				return false;
 			}
@@ -76,7 +115,7 @@ bool check_equation( std::istringstream & check )
 		else if ( token.compare("(") == 0 )
 		{
 			parens += 1;
-			if ( num_next ) 
+			if ( num_next )
 			{//if a number is supposed to be next, a "(" will work fine
 				num_next = true;
 			}
@@ -118,7 +157,7 @@ bool check_equation( std::istringstream & check )
 }
 
 /*
- * Checks whether the input string is a valid integer value. 
+ * Checks whether the input string is a valid integer value.
  * Allows for negative signs.
  */
 bool is_integer(std::string line)
