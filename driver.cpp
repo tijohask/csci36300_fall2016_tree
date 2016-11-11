@@ -56,8 +56,10 @@ void run_code()
 		if( flag )
 		{//run the evaluation on the equation
 			printf("The equation is valid\n");
-//			infix.clear();
-//			infix.str( input );
+			infix.clear();
+			infix.str( input );
+//			Builder builder ();
+//			builder.build( infix );
 //			infix_to_command( infix, commands );
 //			evaluate( commands );
 		}
