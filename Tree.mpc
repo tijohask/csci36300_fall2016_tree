@@ -7,10 +7,10 @@ project (Tree) {
 
 	Source_Files {
 		driver.cpp
-		Visitor.cpp
 		Binary_Node.cpp
 		Add_Node.cpp
 		Num_Node.cpp
+		Eval_Visitor.cpp
 	}
 
 	Template_Files {
@@ -32,6 +32,7 @@ project (Tree) {
 		Add_Node.h
 		Num_Node.h
 		Visitor.h
+		Eval_Visitor.h
 	}
 
 	Inline_Files {
