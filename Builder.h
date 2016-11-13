@@ -17,6 +17,7 @@
 #include <sstream>
 #include <cstdlib>
 
+// Ryan: Incomplete class.
 
 class Builder
 {
