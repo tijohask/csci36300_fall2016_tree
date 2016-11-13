@@ -8,6 +8,8 @@
 //#include "Add_Node.h"
 //#include "Num_Node.h"
 
+// Ryan: Please make sure to comment in each file.
+
 void Eval_Visitor :: visit_Add_Node (Add_Node node)
 {
 	node.getChild1()->accept(*this);

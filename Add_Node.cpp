@@ -11,6 +11,8 @@
 //
 //}
 
+// Ryan: Please include comments in each file.
+
 void Add_Node :: accept (Visitor & v)
 {
 	v.visit_Add_Node(*this);

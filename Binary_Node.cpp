@@ -10,6 +10,8 @@
 //
 //}
 
+// Ryan: Make sure to include comments in each file.
+
 Binary_Node :: ~Binary_Node (void) 
 {
 	delete child1;

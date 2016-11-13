@@ -6,6 +6,8 @@
 #include "Num_Node.h"
 #include "Visitor.h"
 
+// Ryan: Please include comments in each file.
+
 void Num_Node :: accept (Visitor & v)
 {
 	v.visit_Num_Node(*this);

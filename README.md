@@ -27,4 +27,4 @@ My forward declaration in Eval_Visitor comes back with the following error:
  
 I'm not sure what the best technique to use for this is. Should I declare the nodes as pointers? Because I don't think that would fix the fact that the nodes need to call a method in the visitor class.
 
-
+// Ryan: These errors tell me there is a linking problem and you need forward declaration.
