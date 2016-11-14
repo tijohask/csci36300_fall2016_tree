@@ -1,0 +1,8 @@
+for f in *
+do
+	if grep -q "Ryan:" $f;
+	then
+		cat $f
+		gedit $f
+	fi
+done
