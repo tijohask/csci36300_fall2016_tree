@@ -26,15 +26,15 @@ class Visitor
 public:
 	Visitor (void);
 
-	virtual void visit_Add_Node(Add_Node);
-//	void visit_Sub_Node(Sub_Node);
-//	void visit_Mul_Node(Mul_Node);
-//	void visit_Div_Node(Mul_Node);
-//	void visit_Mod_Node(Mul_Node);
-	virtual void visit_Num_Node(Num_Node);
+	virtual void visit_Add_Node(Add_Node&) = 0;
+//	virtual void visit_Sub_Node(Sub_Node&) = 0;
+//	virtual void visit_Mul_Node(Mul_Node&) = 0;
+//	virtual void visit_Div_Node(Mul_Node&) = 0;
+//	virtual void visit_Mod_Node(Mul_Node&) = 0;
+	virtual void visit_Num_Node(Num_Node&) = 0;
 
 private:
-	Stack <int> stack;
+//	Stack <int> stack;
 //	virtual int eval (void) = 0;
 //	virtual void preorder (ostream &) = 0;
 //	virtual bool execute (Stack <int> & stack) = 0;
