@@ -10,8 +10,9 @@
 class Num_Node : public Node
 {
 public:
-	Num_Node (void);
-	//~Num_Node (void) {};
+//	Num_Node (void);
+	Num_Node (int);
+//	~Num_Node (void) {};
 	void accept (Visitor &);
 	int getVal();
 	void setVal(int);

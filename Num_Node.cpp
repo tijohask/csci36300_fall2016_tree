@@ -8,6 +8,11 @@
 
 // Ryan: Please include comments in each file.
 
+Num_Node :: Num_Node (int n)
+{
+	val = n;
+}
+
 void Num_Node :: accept (Visitor & v)
 {
 	v.visit_Num_Node(*this);
