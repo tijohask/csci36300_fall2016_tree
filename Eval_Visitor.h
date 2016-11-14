@@ -25,14 +25,16 @@
 class Eval_Visitor : public Visitor
 {
 public:
-	Eval_Visitor (void);
-
-	void visit_Add_Node(Add_Node);
-//	void visit_Sub_Node(Sub_Node);
-//	void visit_Mul_Node(Mul_Node);
-//	void visit_Div_Node(Mul_Node);
-//	void visit_Mod_Node(Mul_Node);
-	void visit_Num_Node(Num_Node);
+	Eval_Visitor (void) {};
+	
+	~Eval_Visitor (void) {};
+	
+	void visit_Add_Node(Add_Node&);
+//	void visit_Sub_Node(Sub_Node&);
+//	void visit_Mul_Node(Mul_Node&);
+//	void visit_Div_Node(Mul_Node&);
+//	void visit_Mod_Node(Mul_Node&);
+	void visit_Num_Node(Num_Node&);
 	
 //	void push(int);
 //	int pop();

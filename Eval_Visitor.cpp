@@ -5,12 +5,12 @@
 
 #include "Eval_Visitor.h"
 //#include "Visitor.h"
-//#include "Add_Node.h"
-//#include "Num_Node.h"
+#include "Add_Node.h"
+#include "Num_Node.h"
 
 // Ryan: Please make sure to comment in each file.
 
-void Eval_Visitor :: visit_Add_Node (Add_Node node)
+void Eval_Visitor :: visit_Add_Node (Add_Node & node)
 {
 	node.getChild1()->accept(*this);
 	node.getChild2()->accept(*this);
@@ -18,7 +18,7 @@ void Eval_Visitor :: visit_Add_Node (Add_Node node)
 	stack.push(n1+n2);
 }
 
-void Eval_Visitor :: visit_Num_Node (Num_Node node)
+void Eval_Visitor :: visit_Num_Node (Num_Node & node)
 {
 	this->stack.push(node.getVal());
 }
