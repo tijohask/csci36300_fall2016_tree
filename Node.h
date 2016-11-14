@@ -15,7 +15,7 @@ class Visitor;
 class Node
 {
 public:
-	Node (void);
+	Node (void) {};
 	virtual ~Node (void) {};
 	virtual void accept (Visitor &) = 0;
 
