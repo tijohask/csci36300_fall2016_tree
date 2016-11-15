@@ -14,7 +14,7 @@
 class Binary_Node : public Node
 {
 public:
-	Binary_Node (void);
+	Binary_Node (void) {};
 	virtual ~Binary_Node (void);
 	virtual void accept (Visitor &) = 0;
 //	virtual void preorder (ostream &) = 0;
