@@ -7,6 +7,16 @@
 #include "Base_Array.h"
 #include "Stack.h"
 #include "Queue.h"
+#include "Node.h"
+#include "Binary_Node.h"
+//#include "Add_Node.h"
+//#include "Sub_Node.h"
+//#include "Mul_Node.h"
+//#include "Div_Node.h"
+//#include "Mod_Node.h"
+//#include "Num_Node.h"
+#include "Builder.h"
+#include "Visitor.h"
 
 #include <stdexcept>
 #include <iostream>
@@ -14,6 +24,7 @@
 #include <cstdlib>
 
 void run_code();
+bool infix_to_tree( std::istringstream&, Builder );
 bool check_equation( std::istringstream& );
 bool is_integer( std::string );
 
@@ -58,8 +69,9 @@ void run_code()
 			printf("The equation is valid\n");
 			infix.clear();
 			infix.str( input );
-//			Builder builder ();
-//			builder.build( infix );
+//			Builder * builder;
+			Builder builder ();
+//			infix_to_tree( infix, *builder );
 //			infix_to_command( infix, commands );
 //			evaluate( commands );
 		}
@@ -69,6 +81,54 @@ void run_code()
 		}
 	}
 	printf("Goodbye.\n");
+}
+
+bool infix_to_tree ( std::istringstream & infix, Builder builder )
+{
+	std::string token;
+	while(!infix.eof())
+	{
+		infix >> token;
+		
+		// For any operator,
+		// create command based on token
+		// clear stack based on token
+		// push command onto stack 
+		if( token.compare("+") == 0 )
+		{
+
+		}
+		else if( token.compare("-") == 0 )
+		{
+	
+		}
+		else if( token.compare("*") == 0 )
+		{
+			
+		}
+		else if( token.compare("/") == 0 )
+		{
+
+		}
+		else if( token.compare("%") == 0 )
+		{
+
+		}
+		else if( token.compare("(") == 0 )
+		{//recurse onto itself if "(" is found
+			
+		}
+		else if( token.compare(")") == 0 )
+		{//end recurse when ")" is found
+			
+		}
+		else
+		{
+
+		}
+	}
+	return true;
+
 }
 
 /*
