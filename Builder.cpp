@@ -35,6 +35,12 @@ bool Builder :: clear_op_stack ( int prec )
 	}
 }
 
+Node * Builder :: getTop ()
+{
+	clear_op_stack( 5 );
+	return tree_stack.top();
+}
+
 /*
  * Clear the stack, with rules based on the string passed in. If the string
  * is a + or - sign, pop until you see a plus or a minus sign. If the string
