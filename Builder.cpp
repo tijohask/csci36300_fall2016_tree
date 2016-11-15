@@ -37,7 +37,6 @@ bool Builder :: clear_op_stack ( int prec )
 
 Node * Builder :: getTop ()
 {
-	clear_op_stack( 5 );
 	return tree_stack.top();
 }
 

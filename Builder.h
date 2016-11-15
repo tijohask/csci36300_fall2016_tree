@@ -30,10 +30,10 @@ public:
 
 	bool build_num_node(int);
 	
+	bool clear_op_stack( int );
 	Node * getTop();
 
 private:
-	bool clear_op_stack( int );
 	Stack<Binary_Node*> op_stack;
 	Stack<Node*> tree_stack;
 };
