@@ -4,12 +4,13 @@
 // on this assignment.
 
 // Ryan: Incomplete class.
+// FIXED: Completed the class.
 
 #include "Builder.h"
 //#include "Node.h"
 //#include "Num_Node.h"
 //#include "Binary_Node.h"
-#include "Add_Node.h"
+//#include "Add_Node.h"
 
 bool Builder :: build_add_node ( )
 {
@@ -37,6 +38,7 @@ bool Builder :: clear_op_stack ( int prec )
 
 Node * Builder :: getTop ()
 {
+	clear_op_stack( 5 );
 	return tree_stack.top();
 }
 
