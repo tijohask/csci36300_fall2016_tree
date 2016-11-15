@@ -15,7 +15,7 @@
 class Add_Node : public Binary_Node
 {
 public:
-	Add_Node (void);
+	Add_Node (void) {};
 	//~Add_Node (void) {};
 	void accept (Visitor &);
 //	virtual void preorder (ostream &) = 0;
