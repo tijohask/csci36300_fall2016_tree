@@ -11,6 +11,7 @@ project (Tree) {
 		Add_Node.cpp
 		Num_Node.cpp
 		Eval_Visitor.cpp
+		Builder.cpp
 	}
 
 	Template_Files {
@@ -33,6 +34,7 @@ project (Tree) {
 		Num_Node.h
 		Visitor.h
 		Eval_Visitor.h
+		Builder.h
 	}
 
 	Inline_Files {
