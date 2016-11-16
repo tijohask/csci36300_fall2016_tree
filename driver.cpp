@@ -8,15 +8,16 @@
 #include "Stack.h"
 #include "Queue.h"
 #include "Node.h"
-//#include "Binary_Node.h"
-//#include "Add_Node.h"
-//#include "Sub_Node.h"
+#include "Binary_Node.h"
+#include "Add_Node.h"
+#include "Sub_Node.h"
 //#include "Mul_Node.h"
 //#include "Div_Node.h"
 //#include "Mod_Node.h"
-//#include "Num_Node.h"
+#include "Num_Node.h"
 #include "Builder.h"
 #include "Visitor.h"
+#include "Eval_Visitor.h"
 
 #include <stdexcept>
 #include <iostream>
@@ -44,6 +45,7 @@ void run_code()
 	while(true)
 	{
 		std::istringstream infix ("");
+		Node * node;
 		flag = false;
 		printf("Please input an equation:\n");
 		getline(std::cin, input);
@@ -71,6 +73,9 @@ void run_code()
 			infix.str( input );
 			Builder builder;
 			infix_to_tree( infix, builder );
+			node = builder.get_top();
+			Eval_Visitor visitor;
+			node->accept(visitor);
 		}
 		else
 		{
@@ -89,11 +94,11 @@ bool infix_to_tree ( std::istringstream & infix, Builder & builder )
 		
 		if( token.compare("+") == 0 )
 		{
-
+			builder.build_add_node();
 		}
 		else if( token.compare("-") == 0 )
 		{
-	
+//			builder.build_sub_node();
 		}
 		else if( token.compare("*") == 0 )
 		{
@@ -109,7 +114,9 @@ bool infix_to_tree ( std::istringstream & infix, Builder & builder )
 		}
 		else if( token.compare("(") == 0 )
 		{//recurse onto itself if "(" is found
-			
+			Builder other;
+			infix_to_tree( infix, other );
+			builder.push_tree( other.get_top() );
 		}
 		else if( token.compare(")") == 0 )
 		{//end recurse when ")" is found
