@@ -23,6 +23,8 @@
 class Builder : Abstract_Builder
 {
 public:
+	Builder(void) {};
+	~Builder(void) {};
 	bool build_add_node(void);
 //	build_sub_node(void);
 //	build_mul_node(void);
@@ -32,7 +34,8 @@ public:
 	bool build_num_node(int);
 	
 	bool clear_op_stack( int );
-	Node * getTop();
+	void push_tree(Node*);
+	Node * get_top();
 
 private:
 	Stack<Binary_Node*> op_stack;

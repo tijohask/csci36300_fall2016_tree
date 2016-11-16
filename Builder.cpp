@@ -36,7 +36,12 @@ bool Builder :: clear_op_stack ( int prec )
 	}
 }
 
-Node * Builder :: getTop ()
+void Builder :: push_tree ( Node * node )
+{
+	tree_stack.push( node );
+}
+
+Node * Builder :: get_top ()
 {
 	clear_op_stack( 5 );
 	return tree_stack.top();

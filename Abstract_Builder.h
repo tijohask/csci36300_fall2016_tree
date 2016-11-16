@@ -29,7 +29,8 @@ public:
 	virtual bool build_num_node(int) = 0;
 	
 	virtual bool clear_op_stack(int) = 0;
-	virtual Node * getTop() = 0;
+	virtual void push_tree(Node*) = 0;
+	virtual Node * get_top() = 0;
 
 private:
 //	Stack<Binary_Node*> op_stack;
