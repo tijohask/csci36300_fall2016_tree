@@ -9,6 +9,7 @@ project (Tree) {
 		driver.cpp
 		Binary_Node.cpp
 		Add_Node.cpp
+		Sub_Node.cpp
 		Num_Node.cpp
 		Eval_Visitor.cpp
 		Builder.cpp
@@ -31,6 +32,7 @@ project (Tree) {
 		Node.h
 		Binary_Node.h
 		Add_Node.h
+		Sub_Node.h
 		Num_Node.h
 		Visitor.h
 		Eval_Visitor.h
