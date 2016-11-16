@@ -10,7 +10,6 @@ printf "\n\e[1;36mCompiling code\e[00m\n"
 make
 
 printf "\n\e[1;35mRunning...\e[00m\n"
-#printf "( 1 + 2 ) * 4\nQUIT" | 
-valgrind --tool=memcheck --leak-check=full --log-file=Valgrind.txt ./Tree
+printf "( 4 + 2 ) * 3\n4 + 2 * 3\n4 * ( 2 + 3 )\n4 * 2 + 3\n8 / 2 + 2\n8 / ( 2 + 2 )\n1 / ( 1 * 0 )\nQUIT" | valgrind --tool=memcheck --leak-check=full --log-file=Valgrind.txt ./Tree
 printf "\n\e[07mDone.\e[00m\n\n"
 cat Valgrind.txt
