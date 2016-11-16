@@ -10,7 +10,7 @@
 #include "Num_Node.h"
 #include "Binary_Node.h"
 #include "Add_Node.h"
-//#include "Sub_Node.h"
+#include "Sub_Node.h"
 //#include "Mul_Node.h"
 //#include "Div_Node.h"
 //#include "Mod_Node.h"
@@ -21,7 +21,7 @@ class Abstract_Builder
 {
 public:
 	virtual bool build_add_node(void) = 0;
-//	build_sub_node(void);
+	virtual bool build_sub_node(void) = 0;
 //	build_mul_node(void);
 //	build_div_node(void);
 //	build_mod_node(void);
