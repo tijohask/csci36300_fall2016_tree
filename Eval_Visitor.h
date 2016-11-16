@@ -16,7 +16,7 @@
 #include "Add_Node.h"
 #include "Sub_Node.h"
 #include "Mul_Node.h"
-//#include "Div_Node.h"
+#include "Div_Node.h"
 //#include "Mod_Node.h"
 //class Num_Node;
 #include "Num_Node.h"
@@ -32,8 +32,8 @@ public:
 	void visit_Add_Node(Add_Node&);
 	void visit_Sub_Node(Sub_Node&);
 	void visit_Mul_Node(Mul_Node&);
-//	void visit_Div_Node(Mul_Node&);
-//	void visit_Mod_Node(Mul_Node&);
+	void visit_Div_Node(Div_Node&);
+//	void visit_Mod_Node(Mod_Node&);
 	void visit_Num_Node(Num_Node&);
 	
 //	void push(int);

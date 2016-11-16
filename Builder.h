@@ -28,7 +28,7 @@ public:
 	bool build_add_node(void);
 	bool build_sub_node(void);
 	bool build_mul_node(void);
-//	build_div_node(void);
+	bool build_div_node(void);
 //	build_mod_node(void);
 
 	bool build_num_node(int);

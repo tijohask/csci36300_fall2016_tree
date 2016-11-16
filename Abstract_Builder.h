@@ -12,7 +12,7 @@
 #include "Add_Node.h"
 #include "Sub_Node.h"
 #include "Mul_Node.h"
-//#include "Div_Node.h"
+#include "Div_Node.h"
 //#include "Mod_Node.h"
 //#include <sstream>
 //#include <cstdlib>
@@ -23,7 +23,7 @@ public:
 	virtual bool build_add_node(void) = 0;
 	virtual bool build_sub_node(void) = 0;
 	virtual bool build_mul_node(void) = 0;
-//	build_div_node(void);
+	virtual bool build_div_node(void) = 0;
 //	build_mod_node(void);
 
 	virtual bool build_num_node(int) = 0;

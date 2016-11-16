@@ -33,6 +33,12 @@ bool Builder :: build_mul_node ( )
 	op_stack.push( temp );
 }
 
+bool Builder :: build_div_node ( )
+{
+	Div_Node * temp = new Div_Node();
+	clear_op_stack( temp->precedence() );
+	op_stack.push( temp );
+}
 
 bool Builder :: build_num_node ( int n )
 {

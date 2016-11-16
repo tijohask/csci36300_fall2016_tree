@@ -34,6 +34,19 @@ void Eval_Visitor :: visit_Mul_Node (Mul_Node & node)
 	stack.push(n1*n2);
 }
 
+void Eval_Visitor :: visit_Div_Node (Div_Node & node)
+{
+	node.getChild1()->accept(*this);
+	node.getChild2()->accept(*this);
+	int n1 = this->stack.pop(), n2 = this->stack.pop();
+	if( n2 == 0 )
+	{//If the divisor is 0, throw an error.
+		throw 0;
+	}
+	//push the division of the numbers on the stack.
+	stack.push(n1/n2);
+}
+
 void Eval_Visitor :: visit_Num_Node (Num_Node & node)
 {
 	this->stack.push(node.getVal());
