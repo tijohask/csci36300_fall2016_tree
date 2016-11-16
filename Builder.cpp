@@ -26,6 +26,14 @@ bool Builder :: build_sub_node ( )
 	op_stack.push( temp );
 }
 
+bool Builder :: build_mul_node ( )
+{
+	Mul_Node * temp = new Mul_Node();
+	clear_op_stack( temp->precedence() );
+	op_stack.push( temp );
+}
+
+
 bool Builder :: build_num_node ( int n )
 {
 	Num_Node * temp = new Num_Node( n );

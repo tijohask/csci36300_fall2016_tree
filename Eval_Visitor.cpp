@@ -26,6 +26,14 @@ void Eval_Visitor :: visit_Sub_Node (Sub_Node & node)
 	stack.push(n1-n2);
 }
 
+void Eval_Visitor :: visit_Mul_Node (Mul_Node & node)
+{
+	node.getChild1()->accept(*this);
+	node.getChild2()->accept(*this);
+	int n1 = this->stack.pop(), n2 = this->stack.pop();
+	stack.push(n1*n2);
+}
+
 void Eval_Visitor :: visit_Num_Node (Num_Node & node)
 {
 	this->stack.push(node.getVal());

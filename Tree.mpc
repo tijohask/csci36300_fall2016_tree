@@ -10,6 +10,7 @@ project (Tree) {
 		Binary_Node.cpp
 		Add_Node.cpp
 		Sub_Node.cpp
+		Mul_Node.cpp
 		Num_Node.cpp
 		Eval_Visitor.cpp
 		Builder.cpp
@@ -33,6 +34,7 @@ project (Tree) {
 		Binary_Node.h
 		Add_Node.h
 		Sub_Node.h
+		Mul_Node.h
 		Num_Node.h
 		Visitor.h
 		Eval_Visitor.h
