@@ -13,13 +13,13 @@
 //class Binary_Node;
 //#include "Binary_Node.h"
 //class Add_Node;
-//#include "Add_Node.h"
-//#include "Sub_Node.h"
+#include "Add_Node.h"
+#include "Sub_Node.h"
 //#include "Mul_Node.h"
 //#include "Div_Node.h"
 //#include "Mod_Node.h"
 //class Num_Node;
-//#include "Num_Node.h"
+#include "Num_Node.h"
 
 // The top Node object that all other Node objects will be inheriting from.
 class Eval_Visitor : public Visitor
@@ -30,7 +30,7 @@ public:
 	~Eval_Visitor (void) {};
 	
 	void visit_Add_Node(Add_Node&);
-//	void visit_Sub_Node(Sub_Node&);
+	void visit_Sub_Node(Sub_Node&);
 //	void visit_Mul_Node(Mul_Node&);
 //	void visit_Div_Node(Mul_Node&);
 //	void visit_Mod_Node(Mul_Node&);
