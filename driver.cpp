@@ -3,6 +3,7 @@
 // I pledge that I have neither given nor receieved any help
 // on this assignment.
 
+//Lord that's a lot of includes...
 #include "Array.h"
 #include "Base_Array.h"
 #include "Stack.h"
@@ -54,8 +55,8 @@ void run_code()
 			break;
 		}
 
-		if( input.compare("") != 0 )
-		{// make sure the user doesn't just input nothing.
+		if( input.find_first_not_of(' ') != std::string::npos )
+		{// make sure the user doesn't just input whitespace or nothing.
 			flag = true;
 		}
 
@@ -76,6 +77,8 @@ void run_code()
 			node = builder.get_top();
 			Eval_Visitor visitor;
 			node->accept(visitor);
+			printf( "%d\n", visitor.pop() );
+			delete node;
 		}
 		else
 		{
@@ -98,7 +101,7 @@ bool infix_to_tree ( std::istringstream & infix, Builder & builder )
 		}
 		else if( token.compare("-") == 0 )
 		{
-//			builder.build_sub_node();
+			builder.build_sub_node();
 		}
 		else if( token.compare("*") == 0 )
 		{
