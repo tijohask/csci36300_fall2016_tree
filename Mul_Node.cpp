@@ -6,6 +6,8 @@
 #include "Mul_Node.h"
 #include "Visitor.h"
 
+#define MUL_PREC 2
+
 //Add_Node :: ~Add_Node (void)
 //{
 //
@@ -20,5 +22,7 @@ void Mul_Node :: accept (Visitor & v)
 
 int Mul_Node :: precedence ()
 {
-	return 2;
+	return MUL_PREC;
 }
+
+#undef MUL_PREC

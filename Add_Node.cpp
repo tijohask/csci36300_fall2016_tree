@@ -6,6 +6,8 @@
 #include "Add_Node.h"
 #include "Visitor.h"
 
+#define ADD_PREC 3
+
 //Add_Node :: ~Add_Node (void)
 //{
 //
@@ -20,5 +22,7 @@ void Add_Node :: accept (Visitor & v)
 
 int Add_Node :: precedence ()
 {
-	return 3;
+	return ADD_PREC;
 }
+
+#undef ADD_PREC
