@@ -29,6 +29,7 @@ void run_code();
 bool infix_to_tree( std::istringstream&, Builder& );
 bool check_equation( std::istringstream& );
 bool is_integer( std::string );
+bool eval ( Node* );
 
 int main()
 {
@@ -69,16 +70,13 @@ void run_code()
 
 		if( flag )
 		{//run the evaluation on the equation
-			printf("The equation is valid\n");
+//			printf("The equation is valid\n");
 			infix.clear();
 			infix.str( input );
 			Builder builder;
 			infix_to_tree( infix, builder );
 			node = builder.get_top();
-			Eval_Visitor visitor;
-			node->accept(visitor);
-			printf( "%d\n", visitor.pop() );
-			delete node;
+			eval( node );
 		}
 		else
 		{
@@ -86,6 +84,22 @@ void run_code()
 		}
 	}
 	printf("Goodbye.\n");
+}
+
+bool eval ( Node * node )
+{
+	Eval_Visitor visitor;
+	try
+	{
+		node->accept(visitor);
+		printf( "%d\n", visitor.pop() );
+	}
+	catch( int e )
+	{
+		printf("Undefined Error: Cannot divide or mod by 0\n");
+	}
+	delete node;
+	
 }
 
 bool infix_to_tree ( std::istringstream & infix, Builder & builder )
@@ -105,11 +119,11 @@ bool infix_to_tree ( std::istringstream & infix, Builder & builder )
 		}
 		else if( token.compare("*") == 0 )
 		{
-			
+			builder.build_mul_node();
 		}
 		else if( token.compare("/") == 0 )
 		{
-
+			builder.build_div_node();
 		}
 		else if( token.compare("%") == 0 )
 		{
@@ -231,5 +245,3 @@ bool is_integer(std::string line)
     strtol(line.c_str(), &p, 10);
     return *p == 0;
 }
-
-
