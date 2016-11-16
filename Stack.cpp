@@ -87,8 +87,8 @@ void Stack <T>::push (T element)
 {
 	if(cur_size_ == array.max_size())
 	{//double the array size if a resize is in order
-		array.resize(array.max_size() * 2);
-	}
+		array.resize(cur_size_ * 2);
+	}//Change array.max_size() to cur_size_
 	array.set(cur_size_, element);//set the element
 	cur_size_ = cur_size_ + 1;
 	top_ = element;//assign element to top_
