@@ -8,9 +8,9 @@
 
 // Ryan: Please include comments in each file.
 
-Num_Node :: Num_Node (int n)
+Num_Node :: Num_Node (int n): val(n)
 {
-	val = n;
+//	val = n;
 }
 
 void Num_Node :: accept (Visitor & v)
