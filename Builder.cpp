@@ -14,14 +14,14 @@
 
 bool Builder :: build_add_node ( )
 {
-	Binary_Node * temp = new Add_Node();
+	Add_Node * temp = new Add_Node();
 	clear_op_stack( temp->precedence() );
 	op_stack.push( temp );
 }
 
 bool Builder :: build_num_node ( int n )
 {
-	Node * temp = new Num_Node( n );
+	Num_Node * temp = new Num_Node( n );
 	tree_stack.push( temp );
 }
 
