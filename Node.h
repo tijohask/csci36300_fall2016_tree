@@ -7,9 +7,9 @@
 #define _NODE_H_
 
 #include "Stack.h"
-//#include "Visitor.h"
+#include "Visitor.h"
 
-class Visitor;
+//class Visitor;
 
 // The top Node object that all other Node objects will be inheriting from.
 class Node

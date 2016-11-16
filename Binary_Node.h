@@ -7,7 +7,7 @@
 #define _BINARY_NODE_H_
 
 #include "Stack.h"
-#include "Visitor.h"
+//#include "Visitor.h"
 #include "Node.h"
 
 // The top Node object that all other Node objects will be inheriting from.

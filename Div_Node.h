@@ -9,7 +9,7 @@
 #include "Stack.h"
 //#include "Node.h"
 #include "Binary_Node.h"
-#include "Visitor.h"
+//#include "Visitor.h"
 
 // The top Node object that all other Node objects will be inheriting from.
 class Div_Node : public Binary_Node
@@ -25,19 +25,3 @@ public:
 
 #endif
 
-/*
-
-void accept (Visitor & v)
-{
-	v.visit_Add_Node(*this);
-}
-
-void visit_Add_Node ( Add_Node & node )
-{
-	node.child1.accept(*this);
-	node.child2.accept(*this);
-	int n2 = stack.pop(), n1 = stack.pop();
-	stack.push(n1+n2);
-}
-
-*/
