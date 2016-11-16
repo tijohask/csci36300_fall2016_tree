@@ -37,7 +37,7 @@ public:
 	void visit_Num_Node(Num_Node&);
 	
 //	void push(int);
-//	int pop();
+	int pop();
 
 private:
 	Stack <int> stack;
