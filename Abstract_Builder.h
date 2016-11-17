@@ -13,7 +13,7 @@
 #include "Sub_Node.h"
 #include "Mul_Node.h"
 #include "Div_Node.h"
-//#include "Mod_Node.h"
+#include "Mod_Node.h"
 //#include <sstream>
 //#include <cstdlib>
 
@@ -24,7 +24,7 @@ public:
 	virtual bool build_sub_node(void) = 0;
 	virtual bool build_mul_node(void) = 0;
 	virtual bool build_div_node(void) = 0;
-//	build_mod_node(void);
+	virtual bool build_mod_node(void) = 0;
 
 	virtual bool build_num_node(int) = 0;
 	
@@ -32,7 +32,7 @@ public:
 	virtual void push_tree(Node*) = 0;
 	virtual Node * get_top() = 0;
 
-private:
+//private:
 //	Stack<Binary_Node*> op_stack;
 //	Stack<Node*> tree_stack;
 };

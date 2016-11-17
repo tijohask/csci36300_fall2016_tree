@@ -19,6 +19,7 @@ class Mul_Node;
 //#include "Mul_Node.h"
 class Div_Node;
 //#include "Div_Node.h"
+class Mod_Node;
 //#include "Mod_Node.h"
 class Num_Node;
 //#include "Num_Node.h"
@@ -33,7 +34,7 @@ public:
 	virtual void visit_Sub_Node(Sub_Node&) = 0;
 	virtual void visit_Mul_Node(Mul_Node&) = 0;
 	virtual void visit_Div_Node(Div_Node&) = 0;
-//	virtual void visit_Mod_Node(Mod_Node&) = 0;
+	virtual void visit_Mod_Node(Mod_Node&) = 0;
 	virtual void visit_Num_Node(Num_Node&) = 0;
 
 private:

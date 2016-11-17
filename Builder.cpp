@@ -40,6 +40,13 @@ bool Builder :: build_div_node ( )
 	op_stack.push( temp );
 }
 
+bool Builder :: build_mod_node ( )
+{
+	Mod_Node * temp = new Mod_Node();
+	clear_op_stack( temp->precedence() );
+	op_stack.push( temp );
+}
+
 bool Builder :: build_num_node ( int n )
 {
 	Num_Node * temp = new Num_Node( n );
@@ -68,16 +75,4 @@ Node * Builder :: get_top ()
 	return tree_stack.top();
 }
 
-/*
- * Clear the stack, with rules based on the string passed in. If the string
- * is a + or - sign, pop until you see a plus or a minus sign. If the string
- * is a *, / or % sign, pop until an equivalent is found. 
- *
-void clear_stack(int prec, Stack<Command*> & stack, Queue<Command*> & take)
-{
-	while( !stack.is_empty() && stack.top()->precedence() <= prec )
-	{
-		take.enqueue( stack.pop() );
-	}
-}
-*/
+
