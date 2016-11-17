@@ -127,7 +127,7 @@ bool infix_to_tree ( std::istringstream & infix, Builder & builder )
 		}
 		else if( token.compare("%") == 0 )
 		{
-
+			builder.build_mod_node();
 		}
 		else if( token.compare("(") == 0 )
 		{//recurse onto itself if "(" is found
