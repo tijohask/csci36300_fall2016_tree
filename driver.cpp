@@ -3,7 +3,6 @@
 // I pledge that I have neither given nor receieved any help
 // on this assignment.
 
-//Lord that's a lot of includes...
 //#include "Array.h"
 //#include "Base_Array.h"
 //#include "Stack.h"
@@ -40,6 +39,13 @@ int main()
 
 }
 
+/*
+ * The core loop that the user runs.
+ * The program will loop, asking user for input
+ *   If the input is valid, print the result
+ *   if the input is not valid, inform the user and try again.
+ */
+
 void run_code()
 {
 	std::string input;
@@ -49,8 +55,8 @@ void run_code()
 		std::istringstream infix ("");
 		Node * node;
 		flag = false;
-		printf("Please input an equation:\n");
-		getline(std::cin, input);
+		printf("\nPlease input an equation:\n");
+		getline(std::cin, input);//take input from user
 		if( input.compare("QUIT") == 0 )
 		{
 			break;
@@ -78,30 +84,36 @@ void run_code()
 			node = builder.get_top();
 			eval( node );
 		}
-		else
-		{
-			printf("The equation is not valid\n");
-		}
 	}
 	printf("Goodbye.\n");
 }
+
+/*
+ * Run Visitor on the tree, print the result.
+ *
+ */
 
 bool eval ( Node * node )
 {
 	Eval_Visitor visitor;
 	try
-	{
+	{//run the visitor through the tree, then print what's on the stack
 		node->accept(visitor);
 		printf( "%d\n", visitor.pop() );
 	}
 	catch( int e )
-	{
+	{//If an error is thrown, tell the user that it can't divide
+	//or mod by zero
 		printf("Undefined Error: Cannot divide or mod by 0\n");
 	}
 	delete node;
 	
 }
 
+/*
+ * Turn the string in infix notation into a tree using a builder class
+ *
+ */
 bool infix_to_tree ( std::istringstream & infix, Builder & builder )
 {
 	std::string token;
@@ -109,6 +121,7 @@ bool infix_to_tree ( std::istringstream & infix, Builder & builder )
 	{
 		infix >> token;
 		
+		//Tell the builder to build nodes based on the incoming strings
 		if( token.compare("+") == 0 )
 		{
 			builder.build_add_node();
@@ -224,7 +237,7 @@ bool check_equation( std::istringstream & check )
 		}
 		else
 		{//unrecognized token will not be accepted
-			printf( "Error: %s not recognized.\n", token.c_str() );
+			printf( "Error: \"%s\" not recognized.\n", token.c_str() );
 			return false;
 		}
 	}
