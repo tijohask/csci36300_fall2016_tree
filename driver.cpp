@@ -76,7 +76,6 @@ void run_code()
 
 		if( flag )
 		{//run the evaluation on the equation
-//			printf("The equation is valid\n");
 			infix.clear();
 			infix.str( input );
 			Builder builder;
