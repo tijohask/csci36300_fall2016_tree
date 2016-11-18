@@ -8,20 +8,16 @@
 
 #include "Stack.h"
 #include "Visitor.h"
-//class Node;
-//#include "Node.h"
-//class Binary_Node;
-//#include "Binary_Node.h"
-//class Add_Node;
 #include "Add_Node.h"
 #include "Sub_Node.h"
 #include "Mul_Node.h"
 #include "Div_Node.h"
 #include "Mod_Node.h"
-//class Num_Node;
 #include "Num_Node.h"
 
-// The top Node object that all other Node objects will be inheriting from.
+// The concrete implementation of visitor.
+// Visits the various nodes of a tree, doing certain actions based on
+// what the current node is.
 class Eval_Visitor : public Visitor
 {
 public:
@@ -36,15 +32,10 @@ public:
 	void visit_Mod_Node(Mod_Node&);
 	void visit_Num_Node(Num_Node&);
 	
-//	void push(int);
 	int pop();
 
 private:
 	Stack <int> stack;
-//	virtual int eval (void) = 0;
-//	virtual void preorder (ostream &) = 0;
-//	virtual bool execute (Stack <int> & stack) = 0;
-//	virtual int precedence() = 0;
 };
 
 #endif

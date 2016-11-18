@@ -7,19 +7,11 @@
 #define _BUILDER_H_
 
 #include "Abstract_Builder.h"
-//#include "Node.h"
-//#include "Num_Node.h"
-//#include "Binary_Node.h"
-//#include "Add_Node.h"
-//#include "Sub_Node.h"
-//#include "Mul_Node.h"
-//#include "Div_Node.h"
-//#include "Mod_Node.h"
-//#include <sstream>
-//#include <cstdlib>
 
 // Ryan: Incomplete class.
+// FIXED: Completed class
 
+// Builder. Builds the tree based on what the driver tells it to do.
 class Builder : Abstract_Builder
 {
 public:
@@ -38,7 +30,9 @@ public:
 	Node * get_top();
 
 private:
+	//The stack that the operators are sorted on.
 	Stack<Binary_Node*> op_stack;
+	//The final tree stack.
 	Stack<Node*> tree_stack;
 };
 

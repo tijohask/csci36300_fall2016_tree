@@ -11,15 +11,12 @@
 #include "Binary_Node.h"
 //#include "Visitor.h"
 
-// The top Node object that all other Node objects will be inheriting from.
+// Add node, for when you want to add things.
 class Add_Node : public Binary_Node
 {
 public:
 	Add_Node (void) {};
-	//~Add_Node (void) {};
 	void accept (Visitor &);
-//	virtual void preorder (ostream &) = 0;
-//	virtual bool execute (Stack <int> & stack) = 0;
 	int precedence();
 };
 

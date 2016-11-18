@@ -14,9 +14,8 @@
 #include "Mul_Node.h"
 #include "Div_Node.h"
 #include "Mod_Node.h"
-//#include <sstream>
-//#include <cstdlib>
 
+// Abstract Builder, the builder that other builders inherit from.
 class Abstract_Builder
 {
 public:
@@ -31,10 +30,6 @@ public:
 	virtual bool clear_op_stack(int) = 0;
 	virtual void push_tree(Node*) = 0;
 	virtual Node * get_top() = 0;
-
-//private:
-//	Stack<Binary_Node*> op_stack;
-//	Stack<Node*> tree_stack;
 };
 
 #endif

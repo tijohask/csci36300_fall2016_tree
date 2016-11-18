@@ -10,7 +10,7 @@
 //#include "Visitor.h"
 #include "Node.h"
 
-// The top Node object that all other Node objects will be inheriting from.
+// Binary node. The node that all other binary operators inherit from.
 class Binary_Node : public Node
 {
 public:
@@ -27,8 +27,8 @@ public:
 	Node * getChild2();
 	void setChild2(Node*);
 private:
-	Node * child1;
-	Node * child2;
+	Node * child1;//first child
+	Node * child2;//second child
 };
 
 #endif

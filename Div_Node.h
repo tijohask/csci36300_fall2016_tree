@@ -11,15 +11,12 @@
 #include "Binary_Node.h"
 //#include "Visitor.h"
 
-// The top Node object that all other Node objects will be inheriting from.
+// Div node, for when you want to divide something.
 class Div_Node : public Binary_Node
 {
 public:
 	Div_Node (void) {};
-	//~Add_Node (void) {};
 	void accept (Visitor &);
-//	virtual void preorder (ostream &) = 0;
-//	virtual bool execute (Stack <int> & stack) = 0;
 	int precedence();
 };
 

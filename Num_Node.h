@@ -10,21 +10,16 @@
 #include "Node.h"
 //#include "Visitor.h"
 
+// Number node, for storing numbers
 class Num_Node : public Node
 {
 public:
-//	Num_Node (void);
 	Num_Node (int);
-//	~Num_Node (void) {};
 	void accept (Visitor &);
 	int getVal();
-	void setVal(int);
 
 private:
-	int val;
-//	virtual void preorder (ostream &) = 0;
-//	virtual bool execute (Stack <int> & stack) = 0;
-//	virtual int precedence() = 0;
+	int val;//stored value
 };
 
 #endif

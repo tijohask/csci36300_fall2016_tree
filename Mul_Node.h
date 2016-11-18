@@ -11,15 +11,12 @@
 #include "Binary_Node.h"
 //#include "Visitor.h"
 
-// The top Node object that all other Node objects will be inheriting from.
+// Mul node, for when you want to multiply something.
 class Mul_Node : public Binary_Node
 {
 public:
 	Mul_Node (void) {};
-	//~Add_Node (void) {};
 	void accept (Visitor &);
-//	virtual void preorder (ostream &) = 0;
-//	virtual bool execute (Stack <int> & stack) = 0;
 	int precedence();
 };
 
