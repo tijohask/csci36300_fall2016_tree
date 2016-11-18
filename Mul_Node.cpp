@@ -8,20 +8,15 @@
 
 #define MUL_PREC 2
 
-//Add_Node :: ~Add_Node (void)
-//{
-//
-//}
-
 // Ryan: Please include comments in each file.
-
+// FIXED: Added comments
 void Mul_Node :: accept (Visitor & v)
-{
+{//accept visitor
 	v.visit_Mul_Node(*this);
 }
 
 int Mul_Node :: precedence ()
-{
+{//return mul precedence (2)
 	return MUL_PREC;
 }
 

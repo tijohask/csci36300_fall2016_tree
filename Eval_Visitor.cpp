@@ -9,7 +9,13 @@
 //#include "Num_Node.h"
 
 // Ryan: Please make sure to comment in each file.
+// FIXED: Added comments
 
+/*
+ * Every visit node method will start by visiting the node's children.
+ * It will then pop two elements off the stack and run its 
+ * evaluation on it.
+ */
 void Eval_Visitor :: visit_Add_Node (Add_Node & node)
 {
 	node.getChild1()->accept(*this);
@@ -60,11 +66,14 @@ void Eval_Visitor :: visit_Mod_Node (Mod_Node & node)
 	stack.push(n1%n2);
 }
 
+// Visiting a num node will just have the node push it's value onto the
+// visitor's stack
 void Eval_Visitor :: visit_Num_Node (Num_Node & node)
 {
 	this->stack.push(node.getVal());
 }
 
+// Return the Visitor's stack's topmost value.
 int Eval_Visitor :: pop ()
 {
 	return this->stack.pop();

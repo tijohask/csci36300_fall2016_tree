@@ -8,20 +8,15 @@
 
 #define DIV_PREC 2
 
-//Add_Node :: ~Add_Node (void)
-//{
-//
-//}
-
 // Ryan: Please include comments in each file.
-
+// FIXED: Included comments.
 void Div_Node :: accept (Visitor & v)
-{
+{//accept visitor
 	v.visit_Div_Node(*this);
 }
 
 int Div_Node :: precedence ()
-{
+{//return div precedence
 	return DIV_PREC;
 }
 

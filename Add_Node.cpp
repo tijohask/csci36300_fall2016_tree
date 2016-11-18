@@ -8,20 +8,15 @@
 
 #define ADD_PREC 3
 
-//Add_Node :: ~Add_Node (void)
-//{
-//
-//}
-
 // Ryan: Please include comments in each file.
-
+// FIXED: Added Comments
 void Add_Node :: accept (Visitor & v)
-{
+{//accept visitor
 	v.visit_Add_Node(*this);
 }
 
 int Add_Node :: precedence ()
-{
+{//return add precedence (3)
 	return ADD_PREC;
 }
 

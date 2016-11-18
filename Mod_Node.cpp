@@ -8,20 +8,15 @@
 
 #define MOD_PREC 2
 
-//Add_Node :: ~Add_Node (void)
-//{
-//
-//}
-
 // Ryan: Please include comments in each file.
-
+// FIXED: Added comments
 void Mod_Node :: accept (Visitor & v)
-{
+{//accept visitor
 	v.visit_Mod_Node(*this);
 }
 
 int Mod_Node :: precedence ()
-{
+{//return div precedence (2)
 	return MOD_PREC;
 }
 

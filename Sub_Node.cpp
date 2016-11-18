@@ -8,20 +8,15 @@
 
 #define SUB_PREC 3
 
-//Add_Node :: ~Add_Node (void)
-//{
-//
-//}
-
 // Ryan: Please include comments in each file.
-
+// FIXED: Added Comments.
 void Sub_Node :: accept (Visitor & v)
-{
+{//accept visitor
 	v.visit_Sub_Node(*this);
 }
 
 int Sub_Node :: precedence ()
-{
+{//return sub precedence (3)
 	return SUB_PREC;
 }
 

@@ -7,23 +7,18 @@
 //#include "Visitor.h"
 
 // Ryan: Please include comments in each file.
-
+// FIXED: Added comments.
 Num_Node :: Num_Node (int n): val(n)
 {
-//	val = n;
+	//initialize with input value n
 }
 
 void Num_Node :: accept (Visitor & v)
-{
+{//accept visitor
 	v.visit_Num_Node(*this);
 }
 
 int Num_Node :: getVal ()
-{
+{//return stored value
 	return val;
-}
-
-void Num_Node :: setVal (int input)
-{
-	val = input;
 }
